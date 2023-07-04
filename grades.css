@@ -1,0 +1,106 @@
+/* boxing grades.html */
+
+
+table{
+    /* !step 1a.*/
+    display: flex;
+    flex-flow: column;
+    /* step 1b. */
+    height: 75vh;
+    width: 100%;
+    /* step 1c. */
+    /* margin: var(--margin-lg) 0; */
+    border-radius: var(--border-radius-md);
+    padding: var(--padding-md);
+    /* step 1d. */
+    background: var(--accent-color-gray);
+
+}
+/* step 3.a~b */
+thead{
+    border-bottom: 1px solid darkgray;
+    padding: var(--padding-sm) 0;
+    padding-right: 4%;           /* To compensate the scrollbar */
+    color: gray;
+    font-weight: bold;
+    justify-content: start;
+}
+
+
+/* step 4a-b */
+tbody{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    flex-grow: 1;
+    margin: 0 var(--margin-sm);
+    /* position: relative; */
+}
+
+/* step 5. This is required for setting flex-basis */
+tr{
+    display: flex;
+    align-items: center;
+}
+/* step 5b. */
+tr :first-child, tr th :first-child{
+    flex-basis: 40%;
+}
+tr td + td, tr th + th {
+    flex-basis: 20%;
+    text-align: justify;
+}  
+
+/* !step 5c. Problematic. Disabling seems to work better*/
+td, th{
+    /* display: flex; */
+    
+}
+
+/* step 6a. */
+.search-wrapper{
+    position: relative;
+    display: flex;
+    /* step 6iii. */
+}
+/* step 6ai. */
+.search-wrapper img{
+    position: absolute;
+    align-self: center;
+    right: 30%;
+    /* step 6aii. */
+    width: 24px;
+    height: 24px;
+    
+}
+/* step 6b */
+input{
+    border: 0;
+    background: inherit;
+    border-radius: var(--border-radius-md);
+    padding: var(--padding-sm) var(--padding-sm) var(--padding-sm);
+    font-size:inherit;
+    width: 100%;
+}
+/* step 6c. */
+input:hover{
+    background: white;
+}
+/* step 7a. */
+button{
+    border: 0;
+    background: inherit;
+    border-radius: var(--border-radius-md);
+    padding: var(--padding-sm) var(--padding-sm) var(--padding-sm);
+    font-size: inherit;
+    /* step 7ai. */
+    cursor: pointer;
+    color: gray;
+}
+
+button:hover{
+    background-color: white;
+}
+
+main h1{
+    padding: 3% 0;
+}

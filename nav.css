@@ -1,0 +1,66 @@
+
+nav{
+    flex-basis: 20%;
+    background-color: var(--accent-color);
+
+    /* optional step! */
+    padding: var(--padding-md);
+}
+
+
+nav h1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    padding: var(--padding-md);
+    font-size:xx-large;
+    color:rgb(218, 185, 255);
+}   
+
+
+nav li{
+    display:flex;
+    justify-content: center;
+    /* step 4a. */
+    border-bottom: 1px solid purple;
+    /* step 4b. */
+    list-style-type: none;
+    
+    
+}
+nav li:hover{
+    background-color: purple ;
+}
+nav li a{
+    display: flex;              /* IMPORTANT  */
+    width: 100%;
+    padding: var(--padding-md) 0;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size:larger;
+    color:white;
+
+}
+/* step 4e. */
+li a span{
+    flex-grow: 1;
+    align-content: center;
+
+}
+
+
+nav li a .svg-wrapper {
+    flex: 0 0 40%;
+    padding-right: var(--padding-sm);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li a .svg-wrapper svg {
+    flex: 0 0 40%;
+    color: white;
+    height: 32px;
+}
